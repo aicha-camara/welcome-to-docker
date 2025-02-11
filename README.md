@@ -32,13 +32,25 @@ wsl --update
 
 ![Resultat](image/1.png)
 
+
+
 Pour afficher des informations détaillées sur l'installation Docker :
 
 ```
 docker info
 ```
 <p align="center">
-  <img src="image/1.png" width="200"/>
   <img src="image/2.png" width="200"/>
   <img src="image/3.png" width="200"/>
+  <img src="image/4.png" width="200"/>
 </p>
+
+
+
+Pour afficher la liste des conteneurs Docker en cours d'exécution :
+
+```
+docker ps
+```
+Resultat :
+![Resultat](image/5.png)
