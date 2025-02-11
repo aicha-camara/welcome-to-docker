@@ -18,3 +18,12 @@ docker build -t welcome-to-docker .
 docker run -d -p 8088:3000 --name welcome-to-docker welcome-to-docker
 ```
 Open `http://localhost:8088` in your browser.
+
+# Welcome to Docker
+Ce repos a pour but de voir les commandes de docker 
+
+# Liste des commandes :
+
+Pour vérifier la version d'installation de docker avec la commande :
+
+`wsl --update`
