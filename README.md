@@ -192,7 +192,7 @@ docker rmi [id / nom de l'image]
 Resultat :
 ![Resultat](image/19.png)
 
-
+---
 # Exemple de commande suppresion 
 
 ### Un conteneur spécifique :
@@ -214,3 +214,39 @@ docker container prune
 
 ```
 
+### Forcer la suppression d'un conteneur actif :
+
+```
+docker container prune -f
+
+```
+### Une image spécifique :
+
+```
+docker rmi [id/nom de l'image]
+
+```
+### Plusieurs images:
+
+```
+docker rmi image1 image2
+
+```
+### Toutes les images inutilisées:
+
+```
+docker image prune
+
+```
+### Toutes les images non utilisées:
+
+```
+docker container prune -a
+
+```
+### Forcer la suppression d'une image:
+
+```
+docker rmi -f [id/nom de l'image]
+
+```
