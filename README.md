@@ -107,7 +107,7 @@ Resultat :
 ![Resultat](image/10.png)
 
 
-    ---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 
 ### Pour télécharger des images Docker depuis dockerhub :
 
@@ -131,3 +131,33 @@ On peut aussi choisir la version qu'on veut :
 ![Resultat](image/bonus2.png)
 
 
+---------------------------------------------------------------------------------------------
+
+### Pour voir la liste des images :
+
+```
+docker images
+```
+Resultat :
+![Resultat](image/13.png)
+
+---------------------------------------------------------------------------------------------
+
+### Pour construire le container Docker:
+
+```
+docker run -it --rm -p 8080:80 “nom de l’image”
+```
+Resultat :
+![Resultat](image/14.png)
+![Resultat](image/15.png)
+
+par contre si on fait que cette commande on pourras pas ecrire de commande apres celle ci . Il faut rajouté l'option ' -d ' pour le lancer et pouvoir faire des commandes apres.
+
+
+```
+docker run -it --rm -d -p 8080:80 nginx
+
+```
+Resultat :
+![Resultat](image/15.png)
