@@ -160,4 +160,57 @@ docker run -it --rm -d -p 8080:80 nginx
 
 ```
 Resultat :
-![Resultat](image/15.png)
+![Resultat](image/16.png)
+
+---------------------------------------------------------------------------------------------
+
+### Pour stopper le container :
+
+```
+docker stop [id / nom du container]
+```
+Resultat :
+![Resultat](image/17.png)
+
+---------------------------------------------------------------------------------------------
+
+### Pour supprimer le container :
+
+```
+docker rm [id / nom du container]
+```
+Resultat :
+![Resultat](image/18.png)
+
+---------------------------------------------------------------------------------------------
+
+### Pour supprimer une image :
+
+```
+docker rmi [id / nom de l'image]
+```
+Resultat :
+![Resultat](image/19.png)
+
+
+# Exemple de commande suppresion 
+
+### Un conteneur spécifique :
+
+```
+docker rm [id / nom du container]
+```
+
+### Plusieurs conteneurs :
+
+```
+docker rm container1 container2 
+```
+
+### Tous les conteneurs arrêtés :
+
+```
+docker container prune
+
+```
+
