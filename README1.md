@@ -42,3 +42,25 @@ On remarque qu'il s'affiche dans le menu et que son statue est up, Maintenant de
 
 Et on remarque lorsqu'on retourne dans le site le titre a bien changer
 ![Resultat](image/27.png)
+
+ ## Publication de notre image
+
+ Pour partagez notre projet il fraudra :
+
+1. Se connecter depuis le terminal
+    ```
+    docker login
+    ```
+    ![Resultat](image/28.png)
+
+2. Rajouter un tag à notre image en rajoutant notre pseudo
+    ```
+    docker tag welcome-to-docker aichaaa/welcome-to-docker:latest
+    ```
+    ![Resultat](image/29.png)
+
+3. Ensuite envoie tout avec un push
+    ```
+    docker push aichaaa/welcome-to-docker:latest
+    ```
+    ![Resultat](image/30.png)
