@@ -26,4 +26,19 @@ Ce repos a pour but de voir les commandes de docker
 
 Pour vérifier la version d'installation de docker avec la commande :
 
-`wsl --update`
+```
+wsl --update
+```
+
+![Resultat](image/1.png)
+
+Pour afficher des informations détaillées sur l'installation Docker :
+
+```
+docker info
+```
+<p align="center">
+  <img src="image/1.png" width="200"/>
+  <img src="image/2.png" width="200"/>
+  <img src="image/3.png" width="200"/>
+</p>
