@@ -24,7 +24,7 @@ Ce repos a pour but de voir les commandes de docker
 
 # Liste des commandes :
 
-Pour vérifier la version d'installation de docker avec la commande :
+### Pour vérifier la version d'installation de docker avec la commande :
 
 ```
 wsl --update
@@ -32,9 +32,9 @@ wsl --update
 
 ![Resultat](image/1.png)
 
+---------------------------------------------------------------------------------------------
 
-
-Pour afficher des informations détaillées sur l'installation Docker :
+### Pour afficher des informations détaillées sur l'installation Docker :
 
 ```
 docker info
@@ -45,12 +45,22 @@ docker info
   <img src="image/4.png" width="200"/>
 </p>
 
+---------------------------------------------------------------------------------------------
 
-
-Pour afficher la liste des conteneurs Docker en cours d'exécution :
+### Pour afficher la liste des conteneurs Docker en cours d'exécution :
 
 ```
 docker ps
 ```
 Resultat :
 ![Resultat](image/5.png)
+
+---------------------------------------------------------------------------------------------
+
+### Pour afficher la liste de toutes les images Docker présentes sur le système local :
+
+```
+docker images
+```
+Resultat :
+![Resultat](image/6.png)
