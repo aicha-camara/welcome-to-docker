@@ -67,7 +67,7 @@ Resultat :
 
 ---------------------------------------------------------------------------------------------
 
-### Pour afficher la liste de toutes les images Docker présentes sur le système local :
+### Pour lancer un conteneur Docker à partir d'une image:
 
 ```
 docker run
@@ -78,9 +78,56 @@ Resultat :
 Pour corrigé l'erreur il faut rajouté le nom d'un container apres le run exemple : 
 
 ```
-docker run nginx
+docker run [nom du container]
 ```
 Resultat :
 ![Resultat](image/8.png)
+
+### Bonus :
+
+On peut mettre un nom personalisé pour nos container et ça rends plus simple de les gerés
+![Resultat](image/bonus1.png)
+
+---------------------------------------------------------------------------------------------
+
+### Pour arreter un ou plusieurs conteneurs :
+
+```
+docker stop
+```
+Resultat :
+![Resultat](image/9.png)
+
+Pour corrigé l'erreur il faut rajouté le nom d'un container apres le stop exemple : 
+
+```
+docker stop [nom du container]
+```
+Resultat :
+![Resultat](image/10.png)
+
+
+    ---------------------------------------------------------------------------------------------
+
+### Pour télécharger des images Docker depuis dockerhub :
+
+```
+docker pull
+```
+Resultat :
+![Resultat](image/11.png)
+
+Pour corrigé l'erreur il faut rajouté le nom d'un container apres le pull exemple : 
+
+```
+docker pull [nom de l'image]
+```
+Resultat :
+![Resultat](image/12.png)
+
+### Bonus :
+
+On peut aussi choisir la version qu'on veut :
+![Resultat](image/bonus2.png)
 
 
