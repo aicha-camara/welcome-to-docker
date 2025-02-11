@@ -64,3 +64,23 @@ docker images
 ```
 Resultat :
 ![Resultat](image/6.png)
+
+---------------------------------------------------------------------------------------------
+
+### Pour afficher la liste de toutes les images Docker présentes sur le système local :
+
+```
+docker run
+```
+Resultat :
+![Resultat](image/7.png)
+
+Pour corrigé l'erreur il faut rajouté le nom d'un container apres le run exemple : 
+
+```
+docker run nginx
+```
+Resultat :
+![Resultat](image/8.png)
+
+
