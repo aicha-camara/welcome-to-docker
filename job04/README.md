@@ -1,16 +1,16 @@
 # Welcome-to-docker - JOB 04
 
-On va créer notre premier dockerfile pour générer un environement apache:
+On va créer notre premier Dockerfile pour générer un environnement Apache :
 
-Pour cela on a un besoin d'un fichier index.php qui nous affichera les infos du serveur :
+Pour cela, nous avons besoin d'un fichier index.php qui affichera les informations du serveur :
 ![resultat](image/1.png)
 
-Ensuite je vais créer mon fichier dockerfile avec les configurations
+Ensuite, je vais créer mon fichier Dockerfile avec les configurations nécessaires.
 ![resultat](image/2.png)
 
 ## Creation de l'image et du container
 
-Apres on doit build l'image et le container avec :
+Après, on doit construire l'image et lancer le container avec :
 
 ### l'image :
 ```
@@ -24,10 +24,9 @@ docker run -d -p 8080:80 apache .
 
 ![resultat](image/4.png)
 
-Apres qu'il soit lancer je peux acceder au site et je tombe sur ça :
-
+Après son lancement, je peux accéder au site et voici ce que j'obtiens :
 ![resultat](image/5.png)
 
-Du coup pour l'arreter j'utilise cette commande :
+Du coup, pour l'arrêter, j'utilise cette commande :
 
 ![resultat](image/6.png)
