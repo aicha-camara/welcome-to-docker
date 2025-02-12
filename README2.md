@@ -35,3 +35,9 @@ Apres l'avoir eteint le deuxieme container je vais dans mon navigateur et je ren
   <img src="image/37.png" width="200"/>
   <img src="image/38.png" width="200"/>
 </p>
+
+Du coup pour l'eteindre je vais chercher son id avec `docker ps` ou `docker ps -a` puis j'utilise :
+```
+docker stop [id]
+```
+ ![resultat](image/39.png)
