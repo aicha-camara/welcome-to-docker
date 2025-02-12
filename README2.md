@@ -41,3 +41,15 @@ Du coup pour l'eteindre je vais chercher son id avec `docker ps` ou `docker ps -
 docker stop [id]
 ```
  ![resultat](image/39.png)
+
+ On remarque que la pastille n'est plus verte donc le container est eteint.
+
+ Maintenant je vais supprimer les deux container et l'image, un avec id et l'autre avec le nom :
+
+  ![resultat](image/40.png)
+  ![resultat](image/41.png)
+  *les containers*
+
+  ![resultat](image/42.png)
+  ![resultat](image/43.png)
+    *l'image*
