@@ -1,12 +1,10 @@
-# Utiliser l'image officielle PHP avec Apache
-FROM php:7.4-apache
+# Utiliser l'image de base Nginx
+FROM nginx:alpine
 
-# Copier les fichiers du jeu dans le répertoire de l'Apache
-COPY index.html /var/www/html/
-COPY results.json /var/www/html/
-COPY save.php /var/www/html/
-# Exposer le port 8080 pour accéder au jeu
-EXPOSE 8080
+# Copier les fichiers nécessaires dans le conteneur
+COPY index.html /usr/share/nginx/html/
+COPY results.json /usr/share/nginx/html/
+COPY save.php /usr/share/nginx/html/
 
-# Démarrer Apache en mode premier plan
-CMD ["apache2-foreground"]
+# Exposer le port 80 pour Nginx
+EXPOSE 80
