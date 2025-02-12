@@ -2,7 +2,7 @@
 
 # Tourner un emulateur 
 
-On va testé un emulateur qui tourne un jeu Mario de l'utilisateur pengbai, pour cela depuis le docker desktop j'ouvre le terminal et je vais pull le projet dans la version la plus recente
+"On va tester un émulateur qui exécute un jeu Mario créé par l'utilisateur pengbai. Pour cela, depuis Docker Desktop, j'ouvre le terminal et je vais récupérer la version la plus récente du projet avec `cocker pull`
 
 ``` 
 docker pull pengbai/docker-supermario
@@ -10,25 +10,26 @@ docker pull pengbai/docker-supermario
   ![Resultat](image/31.png)
   ![Resultat](image/32.png)
  
-On observe qu'il est present dans l'onglet des images mais il se passe rien dans le container du coup depuis le terminal je vais lancer un container avec cette image. Il ya deux methode avec docker compose (avec le fichier yaml) ou sinon les commande, personnellement j'ai utilisé la commande:
+On observe que l'image est bien présente dans l'onglet Images, mais rien ne se passe dans l'onglet Containers. Je vais donc lancer un conteneur à partir de cette image via le terminal.
+Il existe deux méthodes pour cela : soit avec Docker Compose (en utilisant un fichier YAML), soit en ligne de commande. Personnellement, j'ai utilisé la commande suivante :
 
 ```
 docker run -it -d -p  8680:8080 pengbai/docker-supermario
 ```
 ![Resultat](image/33.png)
 
-Comme jai oublié de mettre un nom personalisé je l'ai rename pour plus facilement le geré:
+Comme j’ai oublié de lui donner un nom personnalisé, je l’ai renommé pour le gérer plus facilement.:
 ```
 docker rename [ancien-nom] [nouveau-nom]
 ```
 ![Resultat](image/34.png)
 
-Apres tout ça on observe que le container est bien present dans l'onglet container avec le nom mario, j'ai aussi créer un nouveau container avec un nouveau port
+Après tout cela, on observe que le conteneur est bien présent dans l'onglet Containers sous le nom mario. J'ai également créé un nouveau conteneur en utilisant un port différent.
 
 ![Resultat](image/35.png)
 
 
-Apres l'avoir eteint le deuxieme container je vais dans mon navigateur et je rentre `localhost:8680` et j'arrive bien devant le jeu
+Après avoir éteint le deuxième conteneur, je vais dans mon navigateur et je rentre `localhost:8680`. Je tombe bien sur le jeu.
 
 <p align="center">
   <img src="image/36.png" width="200"/>
@@ -36,20 +37,19 @@ Apres l'avoir eteint le deuxieme container je vais dans mon navigateur et je ren
   <img src="image/38.png" width="200"/>
 </p>
 
-Du coup pour l'eteindre je vais chercher son id avec `docker ps` ou `docker ps -a` puis j'utilise :
+Du coup, pour l'éteindre, je vais chercher son ID avec `docker ps` ou `docker ps -a`, puis j'utilise la commande suivante :
 ```
 docker stop [id]
 ```
  ![resultat](image/39.png)
 
- On remarque que la pastille n'est plus verte donc le container est eteint.
-
- Maintenant je vais supprimer les deux container et l'image, un avec id et l'autre avec le nom :
-
+On remarque que la pastille n'est plus verte, donc le conteneur est éteint.
+Maintenant, je vais supprimer les deux conteneurs et l'image, un avec l'ID et l'autre avec le nom :
+  
+  ### les 2 methodes pour les conteneurs:
   ![resultat](image/40.png)
   ![resultat](image/41.png)
-  *les containers*
-
+  
+  ### les 2 methodes pour les images:
   ![resultat](image/42.png)
   ![resultat](image/43.png)
-    *l'image*
