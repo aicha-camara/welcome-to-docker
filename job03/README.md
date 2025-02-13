@@ -2,7 +2,7 @@
 
 # Tourner un emulateur 
 
-"On va tester un émulateur qui exécute un jeu Mario créé par l'utilisateur pengbai. Pour cela, depuis Docker Desktop, j'ouvre le terminal et je vais récupérer la version la plus récente du projet avec `cocker pull`
+"On va tester un émulateur qui exécute un jeu Mario créé par l'utilisateur pengbai. Pour cela, depuis Docker Desktop, j'ouvre le terminal et je vais récupérer la version la plus récente du projet avec `docker pull`
 
 ``` 
 docker pull pengbai/docker-supermario
