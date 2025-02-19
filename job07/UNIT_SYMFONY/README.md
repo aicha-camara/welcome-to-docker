@@ -42,7 +42,7 @@ Notre fichier `docker-compose.yml` liste tous les services dont on a besoin et l
 
 2. Le service `webserver` utilise l'image `nginx:stable`, puis crée un conteneur nommé `symfony_webserver`. Il expose le port `8080` sur l'hôte pour le rediriger vers le port `80` du conteneur. Ensuite, il crée deux volumes : l'un pour lier le répertoire `./app de l'hôte` à `/var/www/html` dans le conteneur, et l'autre pour lier le répertoire `./nginx` de l'hôte à `/etc/nginx/conf.d` dans le conteneur. Le service dépend du service `app`, ce qui signifie qu'il sera lancé uniquement après que le service `app` soit démarré. Enfin, le service sera connecté à un réseau Docker nommé `symfony_network`.
 
-
+3. Le service `database` utilise l'image `mysql:8.0`, puis crée un conteneur nommé `symfony_db`. Ensuite, il crée une base de données nommée `symfony`, définit l'hôte de la base de données comme `symfony_db`, et configure un utilisateur `symfony` avec le mot de passe `symfony`, ainsi qu'un mot de passe `root` pour l'utilisateur root. Il expose le port `3306` du conteneur vers le port `3306` de l'hôte pour permettre l'accès à la base de données depuis l'extérieur du conteneur. Ensuite, il crée un volume `db_data:/var/lib/mysql` qui sera utilisé pour stocker les bases de données et les relations internes de MySQL. Enfin, le service est connecté à un réseau Docker nommé `symfony_network`.
 
 
 
