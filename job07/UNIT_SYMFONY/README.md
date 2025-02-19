@@ -44,6 +44,9 @@ Notre fichier `docker-compose.yml` liste tous les services dont on a besoin et l
 
 3. Le service `database` utilise l'image `mysql:8.0`, puis crée un conteneur nommé `symfony_db`. Ensuite, il crée une base de données nommée `symfony`, définit l'hôte de la base de données comme `symfony_db`, et configure un utilisateur `symfony` avec le mot de passe `symfony`, ainsi qu'un mot de passe `root` pour l'utilisateur root. Il expose le port `3306` du conteneur vers le port `3306` de l'hôte pour permettre l'accès à la base de données depuis l'extérieur du conteneur. Ensuite, il crée un volume `db_data:/var/lib/mysql` qui sera utilisé pour stocker les bases de données et les relations internes de MySQL. Enfin, le service est connecté à un réseau Docker nommé `symfony_network`.
 
+4. Le service `phpmyadmin` utilise l'image `phpmyadmin/phpmyadmin`, puis crée un conteneur nommé `symfony_phpmyadmin`. Il définit le redémarrage automatique avec restart: always, ce qui signifie que le conteneur sera redémarré si nécessaire. Il expose le port `8082` du conteneur vers le port `80` de l'hôte . Avec l'environment  il configure phpMyAdmin pour se connecter à la base de données `symfony_db`. Il définit le mot de passe `root` de MySQL sur root, puis on spécifie la base de données `phpmyadmin` et on crée un utilisateur `symfony` avec le mot de passe `symfony` pour accéder à la gestion de phpMyAdmin. Le service dépend du service `database`, ce qui signifie qu'il sera lancé uniquement après que le service `database` soit démarré . Enfin, le service est connecté à un réseau Docker nommé `symfony_network`.
+
+
 
 
 2. Expliquez dans le readme du dossier projet ce qu’il fait ligne par ligne
