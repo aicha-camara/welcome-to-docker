@@ -48,6 +48,7 @@ Notre fichier `docker-compose.yml` liste tous les services dont on a besoin et l
 
 5. Le networks qui est pas un service définit un réseau Docker appelé `symfony_network`. Ce réseau utilise le driver `bridge`, qui permet aux conteneurs connectés à ce réseau de communiquer entre eux tout en étant isolés du reste du réseau extérieur
 
+6. Le volumes qui est pas un service nommés declare 2 volumes. Le premier, db_data, est utilisé pour stocker de manière persistante les données de la base de données. Le deuxième, phpmyadmin_data, est utilisé pour stocker les données spécifiques à phpMyAdmin, permettant ainsi de garder les informations même si les conteneurs sont redémarrés
 
 2. Expliquez dans le readme du dossier projet ce qu’il fait ligne par ligne
 2. Créer un fichier de configuration Nginx
