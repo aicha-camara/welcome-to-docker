@@ -46,7 +46,7 @@ Notre fichier `docker-compose.yml` liste tous les services dont on a besoin et l
 
 4. Le service `phpmyadmin` utilise l'image `phpmyadmin/phpmyadmin`, puis crée un conteneur nommé `symfony_phpmyadmin`. Il définit le redémarrage automatique avec restart: always, ce qui signifie que le conteneur sera redémarré si nécessaire. Il expose le port `8082` du conteneur vers le port `80` de l'hôte . Avec l'environment  il configure phpMyAdmin pour se connecter à la base de données `symfony_db`. Il définit le mot de passe `root` de MySQL sur root, puis on spécifie la base de données `phpmyadmin` et on crée un utilisateur `symfony` avec le mot de passe `symfony` pour accéder à la gestion de phpMyAdmin. Le service dépend du service `database`, ce qui signifie qu'il sera lancé uniquement après que le service `database` soit démarré . Enfin, le service est connecté à un réseau Docker nommé `symfony_network`.
 
-
+5. Le networks qui est pas un service définit un réseau Docker appelé `symfony_network`. Ce réseau utilise le driver `bridge`, qui permet aux conteneurs connectés à ce réseau de communiquer entre eux tout en étant isolés du reste du réseau extérieur
 
 
 2. Expliquez dans le readme du dossier projet ce qu’il fait ligne par ligne
