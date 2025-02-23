@@ -50,11 +50,17 @@ Notre fichier `docker-compose.yml` liste tous les services dont on a besoin et l
 
 6. Le volumes qui est pas un service nommés declare 2 volumes. Le premier, db_data, est utilisé pour stocker de manière persistante les données de la base de données. Le deuxième, phpmyadmin_data, est utilisé pour stocker les données spécifiques à phpMyAdmin, permettant ainsi de garder les informations même si les conteneurs sont redémarrés
 
-2. Expliquez dans le readme du dossier projet ce qu’il fait ligne par ligne
-2. Créer un fichier de configuration Nginx
-Créez un dossier nginx et un fichier default.conf avec le contenu
-approprié fournis en annexe.
-3. Expliquez dans le readme du dossier projet ce qu’il fait ligne par ligne
-4. Créer un fichier dockerfile avec le contenu approprié fournis en
-annexe.
-5. Expliquez dans le readme du dossier projet ce qu’il fait ligne par ligne
+- Ensuite je creer le dossier nginx avec un fichier `default.conf`. Ce fichier sert a X
+- En dernier en créer un fichier dockerfile avec le contenu. Ce fichier sert a X
+
+
+Maintenant on va utilisé docker compose pour construire nos images container et volumes 
+j'ai verifié avec docker ps / images / volumes que tout est installé puis jai essayé d installer symphony avec composer mais je suis pris une erreur, on me disait que la version de symfony et de mon php n'est pas compatible et effectivement la version php 8.1 est obsolete pour symfony 7.2.x du coup j'ai dabbors tenté de installer la version php 8.3 sur mon ordinateur depuis laragon mais encore une fois une erreur mon ordinateur refuse de faire la mise a jour du coup jai fais utilisé une version alternative comme j'ai installé wls  du coup jai utilisé le terminal de debian pour telecharger avec les commande une version php plus recente:
+
+1 jai mis a jour les paquets 
+2 jai installer ppa pour php
+3 jai utilisé la xommande pour installer php
+
+Apres cela jai utiliser la commande composer pour installer symphony et ça a fonctionner il m'a creer mon dosser app avec tout les fichiers pour faire fonctionner symfony et composer la derniere etape et d'aller dans le dossier env et modifier le APP_ENV,APP_SECRET, et DATABASE_URL
+
+Apres cela je refais un dockercompose pour tout remettre a jours puis je vais dans http://localhost:8080 et je tombe bien sur a page de symphony 
